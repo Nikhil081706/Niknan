@@ -1,0 +1,28 @@
+Here is a simple C program to add two numbers:
+
+Copy the code
+#include <stdio.h>
+
+int main() {
+    int num1, num2, sum;
+
+    // Asking the user to input two integers
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Calculating the sum
+    sum = num1 + num2;
+
+    // Displaying the result
+    printf("The sum of %d and %d is %d\n", num1, num2, sum);
+
+    return 0;
+}
+
+How it works:
+The program prompts the user to enter two integers.
+It reads the input using scanf.
+The sum is calculated using the + operator.
+Finally, the result is displayed using printf.
+
+Feel free to modify it as needed! 😊
