@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, temp;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    temp = num1;   // Store the value of num1 in temp
+    num1 = num2;   // Assign the value of num2 to num1
+    num2 = temp;   // Assign the value of temp (original num1) to num2
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
+2. Without Using a Temporary Variable (Arithmetic Operations):
+This method utilizes arithmetic properties to exchange values.
+C
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    num1 = num1 + num2; // num1 now holds the sum of original num1 and num2
+    num2 = num1 - num2; // num2 now holds the original value of num1
+    num1 = num1 - num2; // num1 now holds the original value of num2
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
+3. Without Using a Temporary Variable (Bitwise XOR Operator):
+This method leverages the properties of the bitwise XOR operator (^).
+C
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    num1 = num1 ^ num2; // num1 becomes (original num1 XOR original num2)
+    num2 = num1 ^ num2; // num2 becomes (new num1 XOR original num2) which is original num1
+    num1 = num1 ^ num2; // num1 becomes (new num1 XOR new num2) which is original num2
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
